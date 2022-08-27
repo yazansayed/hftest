@@ -14,20 +14,6 @@ jobs:
         with:
           fetch-depth: 0
           lfs: True
-      - name: LFS Install
-        run: git lfs install
-      - name: LFS Track
-        run: git lfs track *.jpg
-      
-      - name: LFS Track2
-        run: git lfs track *.png
-      
-      - name: LFS att
-        run: git add .gitattributes
-      
-        
-      - name: Checkout LFS objects
-        run: git lfs checkout
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
