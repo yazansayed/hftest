@@ -21,6 +21,10 @@ jobs:
       
       - name: LFS Track2
         run: git lfs track *.png
+      
+      - name: LFS att
+        run: git add .gitattributes
+      
         
       - name: Checkout LFS objects
         run: git lfs checkout
